@@ -7,11 +7,17 @@ This project performs **customer segmentation** for a mall dataset, focusing on 
 This project demonstrates the **end-to-end workflow of an unsupervised machine learning pipeline**, including data preprocessing, scaling, exploratory data analysis, K-Means clustering, and cluster visualization.
 
 ---
+## Live Demo
+
+Try the live Streamlit app here: [Customer Segmentation App](https://customer-segmentation-cm38uc6sz8juftllzbbsrr.streamlit.app/)
+
+---
 
 ## Table of Contents
 
 - [Customer Segmentation Project](#customer-segmentation-project)
   - [Project Overview](#project-overview)
+  - [Live Demo](#live-demo)
   - [Table of Contents](#table-of-contents)
   - [Dataset](#dataset)
   - [Project Structure](#project-structure)
