@@ -31,6 +31,6 @@ metrics={
     "davies_bouldin_score:  ": de_score,
     "silhouette_score:  ": si_score
     }
-
+# save the values of the metrics
 with open (r"C:\Users\user\Desktop\Elavvo ML Internship\Customer-Segmentation\outputs\metrics.json","w") as f:
     json.dump(metrics,f)
