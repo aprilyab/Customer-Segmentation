@@ -10,17 +10,12 @@ This project demonstrates the **end-to-end workflow of an unsupervised machine l
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Table of Contents](#table-of-contents)
-- [Dataset](#dataset)
-- [Project Structure](#project-structure)
-- [Requirements](#requirements)
-- [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
-- [Clustering](#clustering)
-- [Visualization](#visualization)
-- [Model Evaluation](#model-evaluation)
-- [References](#references)
-- [Author](#author)
+- [Customer Segmentation Project](#customer-segmentation-project)
+  - [Project Overview](#project-overview)
+  - [Table of Contents](#table-of-contents)
+  - [Dataset](#dataset)
+  - [Project Structure](#project-structure)
+  - [Requirements](#requirements)
 
 ---
 
@@ -62,11 +57,13 @@ Customer-Segmentation/
 ├── .gitignore                # Git ignore rules
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
-Requirements
+## Requirements
 
-Install required Python packages using:
+- **Install required Python packages:**
 
+```bash
 pip install -r requirements.txt
+
 
 
 Python Libraries:
@@ -81,12 +78,16 @@ matplotlib → Plotting clusters
 
 seaborn → Advanced visualizations
 
-.gitignore example:
+Example .gitignore:
 
 __pycache__/
+
 *.py[cod]
+
 .ipynb_checkpoints/
+
 data/processed/
+
 outputs/
 
 Data Cleaning and Preprocessing
@@ -103,6 +104,8 @@ Save processed data in data/processed/ for reproducibility
 
 Clustering
 
+Steps for clustering:
+
 Exploratory Data Analysis (EDA): Visualize distribution of income and spending score
 
 Optimal Clusters: Determine the number of clusters using the Elbow Method
@@ -113,6 +116,8 @@ Assign cluster labels to each customer for segmentation
 
 Visualization
 
+Visualization steps:
+
 2D Scatter Plots: Customers colored by cluster label
 
 Cluster Centers: Highlighted with X markers
@@ -120,6 +125,8 @@ Cluster Centers: Highlighted with X markers
 Outputs saved in outputs/figures/
 
 Model Evaluation
+
+Evaluation steps:
 
 Evaluate cluster compactness and separation using WCSS (Within-Cluster Sum of Squares)
 
