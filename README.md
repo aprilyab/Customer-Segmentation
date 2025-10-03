@@ -15,7 +15,15 @@ This project demonstrates the **end-to-end workflow of an unsupervised machine l
   - [Table of Contents](#table-of-contents)
   - [Dataset](#dataset)
   - [Project Structure](#project-structure)
-  - [Requirements](#requirements)
+- [Customer Segmentation Project - Details](#customer-segmentation-project---details)
+  - [Python Libraries](#python-libraries)
+  - [Example `.gitignore`](#example-gitignore)
+  - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+  - [Clustering](#clustering)
+  - [Visualization](#visualization)
+  - [Model Evaluation](#model-evaluation)
+  - [References](#references)
+  - [Author](#author)
 
 ---
 
@@ -57,98 +65,82 @@ Customer-Segmentation/
 ├── .gitignore                # Git ignore rules
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
-## Requirements
+# Customer Segmentation Project - Details
 
-- **Install required Python packages:**
+## Python Libraries
 
-```bash
-pip install -r requirements.txt
+- `pandas` → Data manipulation
+- `numpy` → Numerical computations
+- `scikit-learn` → K-Means clustering
+- `matplotlib` → Plotting clusters
+- `seaborn` → Advanced visualizations
 
+---
 
+## Example `.gitignore`
 
-Python Libraries:
+- `__pycache__/`
+- `*.py[cod]`
+- `.ipynb_checkpoints/`
+- `data/processed/`
+- `outputs/`
 
-pandas → Data manipulation
+---
 
-numpy → Numerical computations
+## Data Cleaning and Preprocessing
 
-scikit-learn → K-Means clustering
+**Steps performed to prepare data for clustering:**
 
-matplotlib → Plotting clusters
+- Select relevant columns: `Annual Income (k$)` and `Spending Score (1-100)`
+- Handle missing values: Drop rows with missing data (if any)
+- Scaling: Standardize features using `StandardScaler`
+- Save processed data in `data/processed/` for reproducibility
 
-seaborn → Advanced visualizations
+---
 
-Example .gitignore:
+## Clustering
 
-__pycache__/
+**Steps for clustering:**
 
-*.py[cod]
+- Exploratory Data Analysis (EDA): Visualize distribution of income and spending score
+- Optimal Clusters: Determine the number of clusters using the Elbow Method
+- K-Means Clustering: Apply K-Means with the selected number of clusters
+- Assign cluster labels to each customer for segmentation
 
-.ipynb_checkpoints/
+---
 
-data/processed/
+## Visualization
 
-outputs/
+**Visualization steps:**
 
-Data Cleaning and Preprocessing
+- 2D Scatter Plots: Customers colored by cluster label
+- Cluster Centers: Highlighted with `X` markers
+- Outputs saved in `outputs/figures/`
 
-Steps performed to prepare data for clustering:
+---
 
-Select relevant columns: Annual Income (k$) and Spending Score (1-100)
+## Model Evaluation
 
-Handle missing values: Drop rows with missing data (if any)
+**Evaluation steps:**
 
-Scaling: Standardize features using StandardScaler
+- Evaluate cluster compactness and separation using WCSS (Within-Cluster Sum of Squares)
+- Save trained KMeans model in `outputs/models/` for future use
+- Metrics stored in `outputs/metrics.json`
 
-Save processed data in data/processed/ for reproducibility
+---
 
-Clustering
+## References
 
-Steps for clustering:
+- [Mall Customer Dataset - Kaggle](https://www.kaggle.com/datasets)
+- [Scikit-learn KMeans Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
+- [Pandas Documentation](https://pandas.pydata.org/docs/)
+- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
 
-Exploratory Data Analysis (EDA): Visualize distribution of income and spending score
+---
 
-Optimal Clusters: Determine the number of clusters using the Elbow Method
+## Author
 
-K-Means Clustering: Apply K-Means with the selected number of clusters
-
-Assign cluster labels to each customer for segmentation
-
-Visualization
-
-Visualization steps:
-
-2D Scatter Plots: Customers colored by cluster label
-
-Cluster Centers: Highlighted with X markers
-
-Outputs saved in outputs/figures/
-
-Model Evaluation
-
-Evaluation steps:
-
-Evaluate cluster compactness and separation using WCSS (Within-Cluster Sum of Squares)
-
-Save trained KMeans model in outputs/models/ for future use
-
-Metrics stored in outputs/metrics.json
-
-References
-
-Mall Customer Dataset - Kaggle
-
-Scikit-learn KMeans Documentation
-
-Pandas Documentation
-
-Matplotlib Documentation
-
-Seaborn Documentation
-
-Author
-
-Name: Henok Yoseph
-Email: henokapril@gmail.com
-
-GitHub: https://github.com/aprilyab
+- **Name:** Henok Yoseph
+- **Email:** henokapril@gmail.com
+- **GitHub:** [aprilyab](https://github.com/aprilyab)
