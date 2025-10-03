@@ -1,3 +1,5 @@
+# Customer Segmentation Project
+
 ## Project Overview
 
 This project performs **customer segmentation** for a mall dataset, focusing on clustering customers based on **annual income** and **spending score**. The goal is to identify distinct customer groups to help businesses improve marketing strategies and customer engagement.
@@ -13,6 +15,12 @@ This project demonstrates the **end-to-end workflow of an unsupervised machine l
 - [Dataset](#dataset)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
+- [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+- [Clustering](#clustering)
+- [Visualization](#visualization)
+- [Model Evaluation](#model-evaluation)
+- [References](#references)
+- [Author](#author)
 
 ---
 
@@ -29,39 +37,38 @@ This project demonstrates the **end-to-end workflow of an unsupervised machine l
 
 ## Project Structure
 
+```text
 Customer-Segmentation/
 │
-├── data/ # Original and processed dataset
-│ ├── raw/ # Raw CSV file
-│ │ └── Mall_Customers.csv
-│ └── processed/ # Scaled and cleaned dataset
+├── data/                     # Original and processed dataset
+│   ├── raw/                  # Raw CSV file
+│   │   └── Mall_Customers.csv
+│   └── processed/            # Scaled and cleaned dataset
 │
-├── notebooks/ # Jupyter notebooks
-│ └── Explanatory_Data_Analysis.ipynb
+├── notebooks/                # Jupyter notebooks
+│   └── Explanatory_Data_Analysis.ipynb
 │
-├── outputs/ # Models, figures, and metrics
-│ ├── figures/ # Cluster visualizations
-│ ├── models/ # Saved KMeans model
-│ └── metrics.json # Cluster evaluation metrics
+├── outputs/                  # Models, figures, and metrics
+│   ├── figures/              # Cluster visualizations
+│   ├── models/               # Saved KMeans model
+│   └── metrics.json          # Cluster evaluation metrics
 │
-├── src/ # Python scripts
-│ ├── data_cleaning_and_processing.py
-│ ├── clustering.py
-│ ├── Visualize_predictions.py
-│ └── Model_evaluation.py
+├── src/                      # Python scripts
+│   ├── data_cleaning_and_processing.py
+│   ├── clustering.py
+│   ├── Visualize_predictions.py
+│   └── Model_evaluation.py
 │
-├── .gitignore # Git ignore rules
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
----
-
-## Requirements
+├── .gitignore                # Git ignore rules
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+Requirements
 
 Install required Python packages using:
 
-```bash
 pip install -r requirements.txt
+
+
 Python Libraries:
 
 pandas → Data manipulation
@@ -76,14 +83,14 @@ seaborn → Advanced visualizations
 
 .gitignore example:
 
-bash
-Copy code
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 data/processed/
 outputs/
+
 Data Cleaning and Preprocessing
+
 Steps performed to prepare data for clustering:
 
 Select relevant columns: Annual Income (k$) and Spending Score (1-100)
@@ -95,6 +102,7 @@ Scaling: Standardize features using StandardScaler
 Save processed data in data/processed/ for reproducibility
 
 Clustering
+
 Exploratory Data Analysis (EDA): Visualize distribution of income and spending score
 
 Optimal Clusters: Determine the number of clusters using the Elbow Method
@@ -104,6 +112,7 @@ K-Means Clustering: Apply K-Means with the selected number of clusters
 Assign cluster labels to each customer for segmentation
 
 Visualization
+
 2D Scatter Plots: Customers colored by cluster label
 
 Cluster Centers: Highlighted with X markers
@@ -111,13 +120,15 @@ Cluster Centers: Highlighted with X markers
 Outputs saved in outputs/figures/
 
 Model Evaluation
+
 Evaluate cluster compactness and separation using WCSS (Within-Cluster Sum of Squares)
 
 Save trained KMeans model in outputs/models/ for future use
 
-Metrics  stored in outputs/metrics.json
+Metrics stored in outputs/metrics.json
 
 References
+
 Mall Customer Dataset - Kaggle
 
 Scikit-learn KMeans Documentation
@@ -128,6 +139,9 @@ Matplotlib Documentation
 
 Seaborn Documentation
 
-Author: Henok Yoseph
+Author
+
+Name: Henok Yoseph
 Email: henokapril@gmail.com
+
 GitHub: https://github.com/aprilyab
