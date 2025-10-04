@@ -34,12 +34,12 @@ st.write("""
   High spenders with high income. Best customers (loyalty programs, premium offers).
 """)
 
-st.subheader(" Predict Your Segment")
-st.write("Enter your information to be assigned to a Customers cluster:")
+st.sidebar.subheader(" Predict Your Segment")
+st.sidebar.write("Enter your information to be assigned to a Customers cluster:")
 
 # User input
-Spending_Score = st.number_input("Spending Score (1-100)", min_value=1, max_value=99, value=50)
-Annual_Income = st.number_input("Annual Income (k$)", min_value=15, max_value=137, value=60)
+Spending_Score = st.sidebar.number_input("Spending Score (1-100)", min_value=1, max_value=99, value=50)
+Annual_Income = st.sidebar.number_input("Annual Income (k$)", min_value=15, max_value=137, value=60)
 
 # convert to dataframe
 df = pd.DataFrame({
@@ -51,7 +51,7 @@ df = pd.DataFrame({
 scaled_df = scaler.transform(df)
 
 # Prediction
-if st.button("Predict Segment"):
+if st.sidebar.button("Predict Segment"):
     cluster = kmeans.predict(scaled_df)[0]
     label = cluster_labels[cluster]
     st.success(f"Predicted Segment: {label}")
